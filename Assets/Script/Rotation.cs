@@ -84,6 +84,6 @@ public class Rotation : MonoBehaviour
         Debug.Log (rotation);
         Debug.Log (Drag);
         Debug.Log (vecA);
-        Debug.Log ("mousePosition");
+        
     }
 }
