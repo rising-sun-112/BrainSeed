@@ -17,4 +17,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Report.unity
     guid: 30546e4475b76423f978442d879d8e4a
+  - enabled: 1
+    path: Assets/Scenes/Gacha.unity
+    guid: dcc18f6ac20fc4b72a426fffaf38004b
+  - enabled: 1
+    path: Assets/Scenes/Study.unity
+    guid: 0d9d3714f83b04bd8b02810a21b07372
+  - enabled: 1
+    path: Assets/Scenes/Friend.unity
+    guid: 199bc8fbd43fc458992347213bfd86f1
+  - enabled: 1
+    path: Assets/Scenes/Option.unity
+    guid: d8236b9d0659d498f92c14d09c2e976e
+  - enabled: 1
+    path: Assets/Scenes/AIBattleReady.unity
+    guid: 610527a63b5a94180aa870d241dac67c
+  - enabled: 1
+    path: Assets/Scenes/FriendBattleReady.unity
+    guid: b349db7f9b95d48e6a5cfd5132a0dbf9
   m_configObjects: {}
