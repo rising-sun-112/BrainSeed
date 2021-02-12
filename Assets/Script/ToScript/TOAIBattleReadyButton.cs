@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TOAIBattleReadyButton : MonoBehaviour
+public class ToAIBattleReadyButton : MonoBehaviour
 {
          public void OnClick() {
     Debug.Log("Button click!");
