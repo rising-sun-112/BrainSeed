@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Panel : MonoBehaviour
 {
+    public enum FadeMode
+    {
+        None,
+        Fade
+    }
     // Start is called before the first frame update
     void Start()
     {
