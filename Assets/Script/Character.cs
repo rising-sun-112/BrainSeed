@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 namespace Seed
 {
@@ -43,9 +45,12 @@ namespace Seed
         public void CalcDamage(int damage)
         {
             _hp -= damage;
-            if (_hp < 0)
+            if (_hp <= 0)
             {
-                _hp = 0;
+                
+                SceneManager.LoadScene("Result");
+
+
             }
 
             Debug.Log($"{this.GetType().Name}は{damage}のダメージを受けました。残りHPは{_hp}");

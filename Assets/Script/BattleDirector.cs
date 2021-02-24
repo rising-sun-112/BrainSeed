@@ -17,6 +17,7 @@ public class BattleDirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         playerslider.value = 1;
         enemyslider.value = 1;
         player = new Player();
@@ -27,10 +28,7 @@ public class BattleDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 仮でマウスボタンをクリックしたら1ターン経過するようにする
-        // if (Input.GetMouseButtonDown(0) {
-        //     CalcTurn();
-        // }
+        
         
     }
 

@@ -10,11 +10,21 @@ public class AttackButton : MonoBehaviour
         director.CalcTurn(1);
 
     }
-    // public void skill2Click();
-    // public void skill3Click();
-    // public void skill4Click();
+    public void skill2Click()
+    {
+        director.CalcTurn(2);
+    }
+    public void skill3Click()
+    {
+        director.CalcTurn(3);
 
-    // Start is called before the first frame update
+    }
+    public void skill4Click()
+    {
+        director.CalcTurn(4);
+
+    }
+// Start is called before the first frame update
     void Start()
     {
         director = GameObject.Find("BattleDirector").GetComponent<BattleDirector>();
