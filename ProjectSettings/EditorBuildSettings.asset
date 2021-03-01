@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: 65ef8615e7e0c4160b66c050f1fe31d3
+  - enabled: 1
+    path: Assets/Scenes/Hensei.unity
+    guid: 2ddd73aea3b18462ba08eea5824d7e5a
+  - enabled: 1
+    path: Assets/Scenes/AIBattle.unity
+    guid: 72a648cc190ee483da316d40c29974dd
   m_configObjects: {}

@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Level : MonoBehaviour
 {
+    public GameObject lvstate = null;
+    public GameObject attackstate = null;
+    public GameObject speedstate = null;
+    public GameObject defensestate = null;
     int lv;
     int attack;
     int speed;
@@ -25,6 +31,14 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Text nowlv = lvstate.GetComponent<Text> ();
+        nowlv.text = "LV" + lv;
+        Text nowattack = attackstate.GetComponent<Text> ();
+        nowattack.text = "\nATTACK" + attack;
+        Text nowspeed = speedstate.GetComponent<Text> ();
+        nowspeed.text = "SPEED" + speed;
+        Text nowdefense = defensestate.GetComponent<Text> ();
+        nowdefense.text = "DEFENSE" + defense;
+
     }
 }
