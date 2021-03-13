@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "635728592350",
+    "project_id": "brainseed-3948f",
+    "storage_bucket": "brainseed-3948f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635728592350:android:052708303d5df88bb4714f",
+        "android_client_info": {
+          "package_name": "com.kato.brainseed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635728592350-lem00kbr6uru6mvglls56e1t49vonfic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3Ist6TQY5a7DefPy1p2ObDEjvCPEWvZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635728592350-lem00kbr6uru6mvglls56e1t49vonfic.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "635728592350-ricunkh58gsaqltre371uomgkq3viall.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kato.brainseed"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

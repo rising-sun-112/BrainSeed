@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 
 public class GenerateSeed : MonoBehaviour
 {
@@ -11,13 +13,16 @@ public class GenerateSeed : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
+
        int level = PlayerPrefs.GetInt("LV", 1);
        var instant = Instantiate(seedPrefab);
-       float scale = 1.0f;
-       level = 13;
+       float scale = 0.5f;
+       
        if (level > 10)
        {
-           scale = 0.5f;
+           scale = 0.2f;
            instant.transform.localScale = new Vector3(scale, scale, scale);
        }
        for (int i = 0; i < level; ++i) 
@@ -40,9 +45,9 @@ public class GenerateSeed : MonoBehaviour
 
 
            if (x == 0.0f) {
-               x = Random.Range(-1.0f, 1.0f);
-               y = Random.Range(-1.0f, 1.0f);
-               z = Random.Range(-1.0f, 1.0f);
+               x = Random.Range(-0.5f, 0.5f);
+               y = Random.Range(-2.5f, 2.5f);
+               z = Random.Range(-0.5f, 0.5f);
 
                PlayerPrefs.SetFloat($"level_{i}_x", x);
                PlayerPrefs.SetFloat($"level_{i}_y", y);
@@ -103,6 +108,8 @@ public class GenerateSeed : MonoBehaviour
            }
            
            go.GetComponent<Renderer>().material.color = colorCode;
+
+           instant.transform.DOMove(new Vector3(0f, 0f, 0f), 2f).SetLoops(-1,LoopType.Yoyo);
        }
        PlayerPrefs.Save();
     }
