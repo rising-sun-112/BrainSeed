@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 
 namespace Seed
@@ -13,23 +14,37 @@ namespace Seed
         protected int _maxhp = 10;
         protected int _attack = 1;
         protected int _defense = 1;
+        public int _ratio = 100;
+
+        protected int _skillId1 = 0;
+        protected int _skillId2 = 0;
+        protected int _skillId3 = 0;
+        protected int _skillId4 = 0;
+　　　　　protected SkillMasterAsset _skillMaster;
 
         public int CalcAttack(int skill = 0)
         {
             int attackPower = _attack * Random.Range(0, 3);
-            if (skill == 1)
+            if (skill == 1 && _skillId1 != 0)
             {
-                attackPower += 1;// スキルが0以上の場合はここでattackPowerに対して効果をかける
+                var skillMaster = _skillMaster.SkillMasterList.Where(skillMaster => skillMaster.id == _skillId1).FirstOrDefault();
+                 Debug.Log(skillMaster.SkillName);
+                 Debug.Log($"before attack:{attackPower}");
+                 if (skillMaster != null)
+                 {
+                     attackPower += attackPower * skillMaster.ratio / 100;
+                 }
+                 Debug.Log($"after attack:{attackPower}");
                 // attackPower *= buff
             }
-            if (skill == 2)
+            if (skill == 2 && _skillId2 != 0)
             {
                 attackPower += 2;
             }
-            if (skill == 3)
+            if (skill == 3 && _skillId3 != 0)
             {
                 attackPower += 3;
-            }if (skill == 4)
+            }if (skill == 4 && _skillId4 != 0)
             {
                 attackPower += 4;
             }
@@ -78,6 +93,11 @@ namespace Seed
             _hp = PlayerPrefs.GetInt("HP", 10);
              _maxhp = PlayerPrefs.GetInt("HP", 10);
             _defense = PlayerPrefs.GetInt("DEFENSE", 1);
+            _skillId1 = PlayerPrefs.GetInt("SKILL_ID_1", 0); 
+             _skillId2 = PlayerPrefs.GetInt("SKILL_ID_2", 0); 
+             _skillId3 = PlayerPrefs.GetInt("SKILL_ID_3", 0); 
+             _skillId4 = PlayerPrefs.GetInt("SKILL_ID_4", 0); 
+
         }
     }
 
