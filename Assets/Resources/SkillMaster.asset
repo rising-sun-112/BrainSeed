@@ -26,5 +26,5 @@ MonoBehaviour:
     SkillName: "\u5FAE\u5206"
     ratio: 400
   - id: 5
-    SkillName: "\u7A4D\u5206"
+    SkillName: 
     ratio: 500

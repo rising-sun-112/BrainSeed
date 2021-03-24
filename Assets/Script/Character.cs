@@ -16,10 +16,10 @@ namespace Seed
         protected int _defense = 1;
         public int _ratio = 100;
 
-        protected int _skillId1 = 0;
-        protected int _skillId2 = 0;
-        protected int _skillId3 = 0;
-        protected int _skillId4 = 0;
+        public int _skillId1 = 1;
+        public int _skillId2 = 2;
+        public int _skillId3 = 3;
+        public int _skillId4 = 4;
 　　　　　protected SkillMasterAsset _skillMaster;
 
         public int CalcAttack(int skill = 0)
@@ -88,16 +88,26 @@ namespace Seed
     {
         public Player()
         {
+
             _level = PlayerPrefs.GetInt("LV", 1);
             _attack = PlayerPrefs.GetInt("ATTACK", 1);
             _hp = PlayerPrefs.GetInt("HP", 10);
              _maxhp = PlayerPrefs.GetInt("HP", 10);
             _defense = PlayerPrefs.GetInt("DEFENSE", 1);
-            _skillId1 = PlayerPrefs.GetInt("SKILL_ID_1", 0); 
-             _skillId2 = PlayerPrefs.GetInt("SKILL_ID_2", 0); 
-             _skillId3 = PlayerPrefs.GetInt("SKILL_ID_3", 0); 
-             _skillId4 = PlayerPrefs.GetInt("SKILL_ID_4", 0); 
+            _skillId1 = PlayerPrefs.GetInt("SKILL_ID_1", 1); 
+             _skillId2 = PlayerPrefs.GetInt("SKILL_ID_2", 2); 
+             _skillId3 = PlayerPrefs.GetInt("SKILL_ID_3", 3); 
+             _skillId4 = PlayerPrefs.GetInt("SKILL_ID_4", 4); 
 
+        }
+        public　void skillsave()
+        {
+             PlayerPrefs.SetInt("SKILL_ID_1", _skillId1);
+            PlayerPrefs.SetInt("SKILL_ID_2", _skillId2);
+             PlayerPrefs.SetInt("SKILL_ID_3", _skillId3);
+             PlayerPrefs.SetInt("SKILL_ID_4", _skillId4);
+
+                PlayerPrefs.Save();
         }
     }
 
